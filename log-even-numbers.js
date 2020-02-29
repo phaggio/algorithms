@@ -5,7 +5,6 @@ const logEvenNums = (num) => {
     if (!num) {
         throw Error("Expected a non empty value.");
     }
-    console.log(num);
     return;
 };
 
