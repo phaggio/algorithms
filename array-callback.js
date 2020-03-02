@@ -2,7 +2,8 @@
 
 // Write a function that takes an array of numbers and a callbackfunction as parameters. 
 // The function parameter should return true if the input meets a certain condition or false otherwise. 
-// Your function should run the function parameter on every element in the array parameter and, if it returns true, add the element to a new array. 
+// Your function should run the function parameter on every element in the array parameter and
+// , if it returns true, add the element to a new array. 
 // Return the new array.
 // ---
 // Input:

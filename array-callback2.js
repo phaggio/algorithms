@@ -22,3 +22,4 @@ const arrayCallback2 = (arr, cb) => {
 
 }
 
+module.exports = arrayCallback2
