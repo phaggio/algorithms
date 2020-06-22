@@ -50,9 +50,16 @@ describe(`arrayCallback2()`, () => {
 			expect(arrayCallback2.hasNone(input, isEven)).toEqual(expected);
 		});
 
+		it('should verify when takes an empty array', () => {
+			const input = [];
+			const expected = true;
+
+			expect(arrayCallback2.hasNone(input, isEven)).toEqual(expected);
+		});
+
 		it('should handle non-arrays', () => {
 			const input = null;
-			const expected = true;
+			const expected = false;
 
 			expect(arrayCallback2.hasNone(input, isEven)).toEqual(expected);
 		});
