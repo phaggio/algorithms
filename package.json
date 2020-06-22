@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "",
-  "directories": {
-    "test": "test"
-  },
+  "directories": {},
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watchAll"
@@ -21,6 +19,9 @@
   },
   "homepage": "https://github.com/phaggio/algorithms#readme",
   "dependencies": {
-    "jest": "^25.1.0"
+    "@babel/core": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "babel-jest": "^26.0.1",
+    "jest": "^25.5.4"
   }
 }

@@ -8,4 +8,4 @@ const logEvenNums = (num) => {
     return;
 };
 
-module.exports = logEvenNums
+export default logEvenNums

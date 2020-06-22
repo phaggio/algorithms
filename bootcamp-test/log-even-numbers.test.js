@@ -1,6 +1,4 @@
-'use strict';
-
-const logEvenNums = require(`../log-even-numbers`);
+import logEvenNums from '../bootcamp/log-even-numbers';
 
 describe('logEvenNums(num)', () => {
     it(`should not be an empty string`, () => {

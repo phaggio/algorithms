@@ -4,8 +4,7 @@
 // return the integer if it is less than 1
 // return null for everything else
 
-
-const accumulate = (max) => {
+const accumulate = max => {
     if (max === undefined || max === null || isNaN(max)) {
         return null;
     } else if (max < 1) {
@@ -19,4 +18,4 @@ const accumulate = (max) => {
     };
 };
 
-module.exports = accumulate
+export default accumulate

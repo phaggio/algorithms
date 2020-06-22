@@ -1,6 +1,4 @@
-'use strict';
-
-const accumulate = require('../accumulate');
+import accumulate from '../bootcamp/accumulate';
 
 describe(`accumulate()`, () => {
     it(`should return integer less than 1`, () => {
