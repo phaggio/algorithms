@@ -4,7 +4,21 @@ describe(`camelCase()`, () => {
 	it(`should return null when pass nothing in arg`, () => {
 		const expected = null;
 		const actual = camelCase();
-		expected(actual).toEqual(expected);
+		expect(actual).toEqual(expected);
+	});
+
+	it(`should return null when pass non-string in arg`, () => {
+		const word = 233;
+		const expected = null;
+		const actual = camelCase(word);
+		expect(actual).toEqual(expected);
+	});
+
+	it(`should return null when pass empty string in arg`, () => {
+		const word = '';
+		const expected = null;
+		const actual = camelCase(word);
+		expect(actual).toEqual(expected);
 	});
 
 	it(`should return a lowercase word when pass one word in arg`, () => {
