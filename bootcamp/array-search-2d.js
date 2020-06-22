@@ -13,3 +13,5 @@ const arraySearch2D = arr => {
 };
 
 export default arraySearch2D
+
+// bigO n
