@@ -1,5 +1,3 @@
-'use strict';
-
 // Write a function which accepts any number of arrays and returns a single flattened array
 // ---
 // Input
@@ -11,9 +9,17 @@
 // `['a', 54, null], [], ['pizza', 42]`
 // Output
 // `['a', 54, null, 'pizza', 42]`
+// ---
+// Input
+// const arrOne = true;
+// const arrTwo = ['pizza', 'is', 'my', 'favorite', 'food'];
+// const arrThree = 'pizza';
+// Output
+// arrTwo
+// ---
 
 const flattenArray = (...arr) => {
 
 }
 
-module.exports = flattenArray
+export default flattenArray
