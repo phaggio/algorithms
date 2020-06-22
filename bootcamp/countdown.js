@@ -1,7 +1,8 @@
-'use strict';
 // Write code to print all numbers from `num` down to 1
-const countdown = (num) => {
-
+const countdown = num => {
+  for (let i = num; i > 0; --i) {
+    console.log(i);
+  }
 };
 
-module.exports = countdown
+export default countdown
