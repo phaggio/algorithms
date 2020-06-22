@@ -10,8 +10,8 @@
 // Input: “what a wonderful day it has been!”
 // Output: "o"
 
-const firstOccurrence = (str) => {
+const firstOccurrence = str => {
 
 }
 
-module.exports = firstOccurrence
+export default firstOccurrence
