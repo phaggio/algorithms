@@ -1,11 +1,12 @@
-const expect = chai.expect;
+import arraySearch2D from '../bootcamp/array-search-2d';
 
-describe('arraySearch2D', function() {
-  it(`should return 3 when given the array
-  [["O", "O", "O"]
-  ["X", "O", "O"],
-  ["O", "O", "X"],
-  ["O", "O", "X"]]`, function() {
+describe(`arraySearch2D`, () => {
+  it(
+    `should return 3 when given the array
+    [["O", "O", "O"]
+    ["X", "O", "O"],
+    ["O", "O", "X"],
+    ["O", "O", "X"]]`, () => {
     const arr = [
       ['O', 'O', 'O'],
       ['X', 'O', 'O'],
@@ -13,29 +14,33 @@ describe('arraySearch2D', function() {
       ['O', 'O', 'X']
     ];
 
-    const result = arraySearch2D(arr);
+    const actual = arraySearch2D(arr);
+    const expected = 3;
 
-    expect(result).to.eql(3);
+    expect(actual).toEqual(expected);
   });
 
-  it(`should return 0 when given the array
-  [["O", "O", "O"],
-  ["O", "O", "O"]]`, function() {
+  it(
+    `should return 0 when given the array
+    [["O", "O", "O"],
+    ["O", "O", "O"]]`, () => {
     const arr = [
       ['O', 'O', 'O'],
       ['O', 'O', 'O']
     ];
 
-    const result = arraySearch2D(arr);
+    const actual = arraySearch2D(arr);
+    const expected = 0;
 
-    expect(result).to.eql(0);
+    expect(actual).toEqual(expected);
   });
 
-  it(`should return 5 when given the array
-  [["X", "O", "O", "O"],
-  ["O", "O", "O", "O"],
-  ["X", "X", "X", "X"],
-  ["O", "O", "O", "O"]]`, function() {
+  it(
+    `should return 5 when given the array
+    [["X", "O", "O", "O"],
+    ["O", "O", "O", "O"],
+    ["X", "X", "X", "X"],
+    ["O", "O", "O", "O"]]`, () => {
     const arr = [
       ['X', 'O', 'O', 'O'],
       ['O', 'O', 'O', 'O'],
@@ -43,17 +48,20 @@ describe('arraySearch2D', function() {
       ['O', 'O', 'O', 'O']
     ];
 
-    const result = arraySearch2D(arr);
+    const actual = arraySearch2D(arr);
+    const expected = 5;
 
-    expect(result).to.eql(5);
+    expect(actual).toEqual(expected);
   });
 
-  it(`should return 0 when given the array
-  [[]]`, function() {
+  it(
+    `should return 0 when given the array
+    [[]]`, () => {
     const arr = [[]];
 
-    const result = arraySearch2D(arr);
+    const actual = arraySearch2D(arr);
+    const expected = 0;
 
-    expect(result).to.eql(0);
+    expect(actual).toEqual(expected);
   });
 });
