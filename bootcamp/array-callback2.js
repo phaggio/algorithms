@@ -8,7 +8,7 @@
 // ## HasMost
 // Returns true if more than 50% of the values in the array meet the given condition
 
-const cb = (num) => num % 2 === 0;
+const cb = num => num % 2 === 0;
 
 const arrayCallback2 = {
 	hasSome: function (array, cb) {
@@ -23,6 +23,6 @@ const arrayCallback2 = {
 	hasMost: function (array, cb) {
 
 	}
-}
+};
 
 export default arrayCallback2

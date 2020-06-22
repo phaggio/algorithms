@@ -6,14 +6,21 @@ describe(`arrayCallback2()`, () => {
 
 	describe(`hasSome`, () => {
 		it('should verify when a value matches', () => {
-			const input = [1, 2, 3];
+			const input = [1, 2, 3, 4, 5, 6];
 			const expected = true;
 
 			expect(arrayCallback2.hasSome(input, isEven)).toEqual(expected);
 		});
 
 		it('should verify when a value does not match', () => {
-			const input = [1, 3];
+			const input = [1, 3, 5, 7];
+			const expected = false;
+
+			expect(arrayCallback2.hasSome(input, isEven)).toEqual(expected);
+		});
+
+		it(`should verify when given an empty array`, () => {
+			const input = [];
 			const expected = false;
 
 			expect(arrayCallback2.hasSome(input, isEven)).toEqual(expected);
@@ -60,6 +67,13 @@ describe(`arrayCallback2()`, () => {
 			expect(arrayCallback2.hasAll(input, isEven)).toEqual(expected);
 		});
 
+		it('should verify when not all values match', () => {
+			const input = [1, 2, 3, 4, 5, 7, 11];
+			const expected = false;
+
+			expect(arrayCallback2.hasAll(input, isEven)).toEqual(expected);
+		});
+
 		it('should verify when no values match', () => {
 			const input = [1, 3, 5, 7, 11];
 			const expected = false;
@@ -98,7 +112,7 @@ describe(`arrayCallback2()`, () => {
 			expect(arrayCallback2.hasMost(input, isEven)).toEqual(expected);
 		});
 
-		it('should handle non-arrays', () => {
+		it(`should handle non-arrays`, () => {
 			const input = null;
 			const expected = false;
 
