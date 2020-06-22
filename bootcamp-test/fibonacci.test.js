@@ -1,6 +1,4 @@
-'use strict';
-
-const fibonacci = require('../fibonacci');
+import fibonacci from '../bootcamp/fibonacci';
 
 describe(`fibonacci()`, () => {
     it(`should return null if takes a non-number value`, () => {

@@ -1,4 +1,5 @@
-// Write a function that takes 2 parameters - the first is an array, the second is an element that may or may not be in the array.
+// Write a function that takes 2 parameters:
+// the first is an array, the second is an element that may or may not be in the array.
 // Without using any built in array methods, return true if the element is in the array or false otherwise.
 // Return false if takes non-array in first arg.
 // ---
@@ -15,7 +16,13 @@
 // Output: false
 
 const checkElementInArray = (arr, element) => {
-
+  if (!arr || !Array.isArray(arr)) return false;
+  for (const item of arr) {
+    if (item === element) return true;
+  };
+  return false;
 }
 
 export default checkElementInArray
+
+// bigO n

@@ -1,5 +1,3 @@
-'use strict';
-
 // Write a function that takes an array of integers as an input and outputs the first duplicate.
 // ---
 // Input: [ 2, 5, 6, 3, 5 ]
@@ -10,9 +8,15 @@
 // ---
 // Input: [ 2, 4, 5 ]
 // Output: undefined
+// ---
+// Input: []
+// Output: undefined
+// ---
+// Input: 'test'
+// Output: undefined
 
-const firstDupInt = (int) => {
+const firstDupInt = arr => {
 
 }
 
-module.exports = firstDupInt
+export default firstDupInt
