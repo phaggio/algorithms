@@ -1,5 +1,3 @@
-'use strict';
-
 const expect = chai.expect;
 
 describe('arraySearch2D', function() {
