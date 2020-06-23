@@ -19,7 +19,13 @@
 // ---
 
 const flattenArray = (...arr) => {
-
+  const merged = [];
+  for (const subArr of arr) {
+    if (Array.isArray(subArr)) {
+      for (const item of subArr) merged.push(item);
+    };
+  };
+  return merged;
 }
 
 export default flattenArray

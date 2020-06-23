@@ -38,15 +38,6 @@ describe(`flattenArray()`, () => {
 		expect(actual).toEqual(expected);
 	});
 
-	it('should handle undefined input', () => {
-		const arrOne = undefined;
-		const arrTwo = [];
-		const expected = [];
-		const actual = flattenArray(arrOne, arrTwo);
-
-		expect(actual).toEqual(expected);
-	});
-
 	it('should non-array inputs', () => {
 		const arrOne = true;
 		const arrTwo = ['pizza', 'is', 'my', 'favorite', 'food'];

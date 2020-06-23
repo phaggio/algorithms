@@ -16,7 +16,18 @@
 // Output: undefined
 
 const firstDupInt = arr => {
-
+  if (!arr || !Array.isArray(arr)) return undefined;
+  const obj = {};
+  for (const int of arr) {
+    if (!obj[int]) {
+      obj[int] = int
+    } else {
+      return int;
+    }
+  }
+  return undefined;
 }
 
 export default firstDupInt
+
+// bigO n
