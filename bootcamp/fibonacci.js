@@ -2,7 +2,7 @@
 // Fibonacci number: each number is the sum of the two preceding ones
 // 0 is fibonacci number too, no negative
 
-const fibonacci = (num) => {
+const fibonacci = num => {
 
 }
 

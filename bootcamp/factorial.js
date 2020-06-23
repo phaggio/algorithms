@@ -5,7 +5,14 @@
 // there's no negative factorial
 
 const factorial = num => {
-
+  if (num === null || typeof num !== 'number') return null;
+  if (num < 0) return null;
+  if (num === 0 ) return 1;
+  let sum = 1;
+  for (let i = 1; i <= num; ++i) {
+    sum = sum * i
+  }
+  return sum;
 };
 
 export default factorial

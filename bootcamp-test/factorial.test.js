@@ -1,6 +1,5 @@
 import factorial from '../bootcamp/factorial';
 
-
 describe(`factorial()`, () => {
   it(`should return null when takes in a non-integer`, () => {
     const num = `test`;
