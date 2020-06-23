@@ -1,7 +1,7 @@
 // Write code to return the largest number in the given array
 
-const maxNum = (arr) => {
+const maxNum = arr => {
 
 };
 
-module.exports = maxNum
+export default maxNum
