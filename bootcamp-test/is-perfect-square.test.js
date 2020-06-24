@@ -40,6 +40,30 @@ describe(`isPerfectSquare()`, () => {
     expect(actual).toEqual(expected);
   });
 
+  it(`should return false if takes a non perfect square number: 111`, () => {
+    const num = 111;
+    const expected = false;
+    const actual = isPerfectSquare(num);
+
+    expect(actual).toEqual(expected);
+  });
+
+  it(`should return false if takes a non perfect square number: 250`, () => {
+    const num = 250;
+    const expected = false;
+    const actual = isPerfectSquare(num);
+
+    expect(actual).toEqual(expected);
+  });
+
+  it(`should return false if takes a non perfect square number: 128`, () => {
+    const num = 128;
+    const expected = false;
+    const actual = isPerfectSquare(num);
+
+    expect(actual).toEqual(expected);
+  });
+
   it(`should return true if takes a perfect square number 100`, () => {
     const num = 100;
     const expected = true;
@@ -51,6 +75,14 @@ describe(`isPerfectSquare()`, () => {
   it(`should return true if takes a perfect square number 36`, () => {
     const num = 36;
     const expected = true;
+    const actual = isPerfectSquare(num);
+
+    expect(actual).toEqual(expected);
+  });
+
+  it(`should return true if takes a huge non-perfect square number 3455322334422322`, () => {
+    const num = 3455322334422322;
+    const expected = false;
     const actual = isPerfectSquare(num);
 
     expect(actual).toEqual(expected);
