@@ -33,4 +33,12 @@ describe(`maxNum()`, () => {
 		expect(actual).toEqual(expected);
 	});
 
+	it(`should return the number in the array if there's only one number in the array`, () => {
+		const arr = [1];
+		const expected = 1;
+		const actual = maxNum(arr);
+
+		expect(actual).toEqual(expected);
+	});
+
 });
