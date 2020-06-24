@@ -8,4 +8,4 @@ const oddOrEven = (num) => {
     return;
 };
 
-module.exports = oddOrEven
+export default oddOrEven
