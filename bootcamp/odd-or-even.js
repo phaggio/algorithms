@@ -3,9 +3,10 @@
 
 const oddOrEven = (num) => {
     if (!num) {
-        throw Error("Expected a non empty value.");
+        throw Error("Expected a non-empty value.");
     }
-    return;
+    if (num % 2 === 0) return `even`;
+    if (num % 2 !== 0) return `odd`;
 };
 
 export default oddOrEven

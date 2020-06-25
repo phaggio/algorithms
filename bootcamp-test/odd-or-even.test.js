@@ -3,8 +3,7 @@ import oddOrEven from '../bootcamp/odd-or-even';
 describe('oddOrEven(num)', () => {
     it(`should not be an empty value`, () => {
         // Arrange
-        const num;
-        const cb = () => oddOrEven(num)
+        const cb = () => oddOrEven()
         const err = new Error(
             "Expected a non-empty value."
         );
