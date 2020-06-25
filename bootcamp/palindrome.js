@@ -11,8 +11,14 @@
 // Input: "racecar"
 // Output: true
 
-const palindrome = (str) => {
-
+const palindrome = str => {
+  if (!str) return false;
+  const arr = str.split(``);
+  for (let i = 0; i < str.length; ++i) {
+    const backwardIndex = str.length - 1 - i;
+    if (arr[i] !== arr[backwardIndex]) return false;
+    if (i >= backwardIndex) return true;
+  }
 }
 
-module.exports = palindrome
+export default palindrome
