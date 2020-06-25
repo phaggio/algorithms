@@ -22,3 +22,5 @@ const palindrome = str => {
 }
 
 export default palindrome
+
+// bigO of n
