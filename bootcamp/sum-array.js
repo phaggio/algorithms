@@ -3,7 +3,12 @@
 // assume it'll always take an array of int.
 
 const sumArray = arr => {
-
+  if (!arr) return 0;
+  let sum = 0;
+  for (const int of arr) {
+    sum += int;
+  };
+  return sum;
 };
 
 export default sumArray
