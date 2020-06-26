@@ -12,7 +12,13 @@
 // Error
 
 const stringRepNumber = str => {
-
+  const num = parseInt(str);
+  if (!num) throw 'not a number';
+  if (num > 0) {
+    return num * (-1);
+  } else {
+    return num;
+  }
 }
 
 export default stringRepNumber
