@@ -3,7 +3,15 @@
 // Else return false
 
 const zeroesAndOnes = str => {
+	const arr = str.split(``);
+	let zeroes = 0;
+	let ones = 0;
 
+	for (const num of arr) {
+		if (num === '0') zeroes++;
+		if (num === '1') ones++;
+	}
+	return zeroes === ones;
 };
 
 export default zeroesAndOnes
