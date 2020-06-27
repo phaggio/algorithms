@@ -20,3 +20,5 @@ const removeElement = (nums, val) => {
 }
 
 export default removeElement
+
+// Big O n

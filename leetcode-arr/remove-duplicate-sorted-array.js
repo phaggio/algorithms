@@ -31,3 +31,5 @@ const removeDup = nums => {
 }
 
 export default removeDup
+
+// Big O n (two pointers)
