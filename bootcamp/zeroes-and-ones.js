@@ -3,7 +3,7 @@
 // Else return false
 
 const zeroesAndOnes = str => {
-    
+
 };
 
 export default zeroesAndOnes
