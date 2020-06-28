@@ -8,12 +8,16 @@
 
 // Input: [1, 2, 3];
 // Output: [1, 2, 4];
+// input array represents number 123
 
 // Input: [4, 3, 2, 1];
 // Output: [4, 3, 2, 2];
+// input array represents number 4321
 
 const plusOne = nums => {
-
+  const index = nums.length - 1;
+  nums[index] = nums[index] + 1;
+  return nums;
 }
 
 export default plusOne
