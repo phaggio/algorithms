@@ -117,4 +117,17 @@ describe('findKthLargest()', () => {
     expect(actual).toEqual(expected)
   });
 
+  it(
+    `should return  for :
+      nums = [-3, -2, -1, -5, -6, -4, 0, -2, -3]
+      k = 2
+    `, () => {
+    const nums = [-3, -2, -1, -5, -6, -4, 0, -2, -3];
+    const k = 2;
+    const expected = -1;
+    const actual = findKthLargest(nums, k);
+
+    expect(actual).toEqual(expected)
+  });
+
 });
