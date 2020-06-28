@@ -15,9 +15,24 @@
 // input array represents number 4321
 
 const plusOne = nums => {
-  const index = nums.length - 1;
-  nums[index] = nums[index] + 1;
+  const endIndex = nums.length - 1;
+  if (nums[endIndex] !== 9) {
+    nums[endIndex] = nums[endIndex] + 1;
+  } else {
+    for (let i = endIndex; i >= 0; --i) {
+      nums[i] = 0;
+      if (nums[i - 1] !== 9 && nums[i - 1] !== undefined) {
+        nums[i - 1] = nums[i - 1] + 1;
+        break;
+      } else if (nums[i - 1] === undefined) {
+        nums.unshift(1);
+      }
+    }
+  }
+
   return nums;
 }
 
 export default plusOne
+
+// big O of n
