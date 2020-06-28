@@ -56,4 +56,26 @@ describe('thirdMax()', () => {
     expect(actual).toEqual(expected);
   });
 
+  it(
+    `should return 2 for :
+      nums = [3, 2, 1, 0, 1, 2, 3, 4, 4, 3, 2, 1, 0, -1]
+    `, () => {
+    const nums = [3, 2, 1, 0, 1, 2, 3, 4, 4, 3, 2, 1, 0, -1];
+    const expected = 2;
+    const actual = thirdMax(nums);
+
+    expect(actual).toEqual(expected)
+  });
+
+  it(
+    `should return 1 for :
+      nums = [2, 2, 3, 1]
+    `, () => {
+    const nums = [2, 2, 3, 1];
+    const expected = 1;
+    const actual = thirdMax(nums);
+
+    expect(actual).toEqual(expected)
+  });
+
 });
