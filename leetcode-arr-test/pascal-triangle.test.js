@@ -1,6 +1,14 @@
 import generate from '../leetcode-arr/pascal-triangle';
 
 describe('generate()', () => {
+  it(`should return [] for 0`, () => {
+    const num = 0;
+    const expected = [];
+    const actual = generate(num);
+
+    expect(actual).toEqual(expected);
+  });
+
   it(`should return [[1]] for 1`, () => {
     const num = 1;
     const expected = [[1]];

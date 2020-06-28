@@ -11,7 +11,27 @@
 // ]
 
 const generate = num => {
-
+	if (num === 0) return [];
+	let count = 1;
+	let outputArr = [[1]];
+	while (count < num) {
+		const latestSubArr = outputArr[outputArr.length - 1]
+		const steps = latestSubArr.length - 1;
+		let newSubArr = [];
+		newSubArr.push(1);
+		for (let i = 0; i < steps; i++) {
+			const int = latestSubArr[i] + latestSubArr[i + 1];
+			newSubArr.push(int);
+		}
+		newSubArr.push(1);
+		outputArr.push(newSubArr);
+		count++;
+	}
+	return outputArr;
 }
 
 export default generate
+
+
+// big O num^2
+// space num^2
