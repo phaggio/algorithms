@@ -8,7 +8,19 @@
 
 const maxSubarray = nums => {
   let max = nums[0];
-  
+  let localMax = nums[0];
+
+  for (let i = 1; i < nums.length; ++i) {
+    localMax = localMax + nums[i];
+    if (nums[i] > localMax) localMax = nums[i];
+    if (localMax > max) max = localMax;
+  }
+  return max;
 }
 
 export default maxSubarray
+
+
+
+// kadane's algo
+// big O of n
