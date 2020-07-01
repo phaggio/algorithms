@@ -39,3 +39,5 @@ const findKthLargest = (nums, k) => {
 }
 
 export default findKthLargest
+
+// Big O n Log n
