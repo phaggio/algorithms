@@ -39,12 +39,9 @@ const nextPermutation = nums => {
       for (let k = i; k < nums.length; ++k) {
         if (nums[i - 1] < nums[k]) {
           swap(k, i - 1) 
-          // break;
           return nums;
         }
       }
-
-      // return nums;
     }
   };
   reverse(0, nums.length - 1);
