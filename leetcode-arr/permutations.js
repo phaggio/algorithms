@@ -1,3 +1,5 @@
+// #46
+
 // Given a collection of distinct integers, return all possible permutations.
 
 const permute = nums => {
@@ -6,20 +8,20 @@ const permute = nums => {
 
   const result = [];
 
-  const findPermutation = (visited = new Set(), current = []) => {
-    if (current.length === nums.length) {
-      result.push(current);
-      return;
-    }
+  // const findPermutation = (visited = new Set(), current = []) => {
+  //   if (current.length === nums.length) {
+  //     result.push(current);
+  //     return;
+  //   }
   
-    for (let i = 0; i < nums.length; ++i) {
-      if (!visited.has(i)) {
-        findPermutation(new Set([...visited, i]), [...current, nums[i]]);
-      }
-    }
-  }
+  //   for (let i = 0; i < nums.length; ++i) {
+  //     if (!visited.has(i)) {
+  //       findPermutation(new Set([...visited, i]), [...current, nums[i]]);
+  //     }
+  //   }
+  // }
 
-  findPermutation();
+  // findPermutation();
   return result;
 }
 
