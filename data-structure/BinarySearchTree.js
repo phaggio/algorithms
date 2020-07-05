@@ -31,10 +31,11 @@ class BinarySearchTree {
       this.root = new Node(newValue);
       return;
     }
+    // this will traverse through the tree and 
     this.insert(this.root, newValue);
   }
 
-  
+
 
 }
 
