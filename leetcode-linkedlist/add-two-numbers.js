@@ -1,10 +1,5 @@
 import LinkedList from '../data-structure/LinkedList';
 
-const l1 = new LinkedList([2, 4, 3]);
-const l2 = new LinkedList([5, 6, 4]);
-const l3 = new LinkedList();
-
-
 const addTwoNumbers = (l1, l2) => {
 
   let currentL1 = l1.head;

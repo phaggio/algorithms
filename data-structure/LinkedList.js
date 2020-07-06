@@ -1,7 +1,7 @@
 class Node {
-  constructor(data) {
-    this.data = data;
-    this.next = null;
+  constructor(val, next) {
+    this.val = (val === undefined ? null : val);
+    this.next = (next === undefined ? null : next);
   }
 }
 
@@ -74,7 +74,7 @@ export default class LinkedList {
     }
   }
 
-  // remove the node from specific index and return its data
+  // remove the node from specific index and return its val
   removeFrom(index) {
     // if list is empty return false
     if (index > 0 && index > this.size) {
@@ -92,17 +92,17 @@ export default class LinkedList {
       }
       previousNode.next = currentNode.next; // remove current node
       this.size--;
-      return currentNode.data; // return removed node data.
+      return currentNode.val; // return removed node val.
     }
   }
 
-  // remove the nodes that contain data=element from the list
+  // remove the nodes that contain val=element from the list
   removeElement(element) {
     let currentNode = this.head;
     let previousNode = null;
 
     while (currentNode !== null) {
-      if (currentNode.data === element) {
+      if (currentNode.val === element) {
         if (previousNode === null) {
           this.head = currentNode.next;
         } else {
@@ -121,7 +121,7 @@ export default class LinkedList {
     let count = 0;
     let currentNode = this.head;
     while (currentNode !== null) {
-      if (currentNode.data === element) {
+      if (currentNode.val === element) {
         return count;
       }
       count++;
@@ -141,7 +141,7 @@ export default class LinkedList {
     } else {
       let currentNode = this.head;
       while (currentNode !== null) {
-        process.stdout.write(String(currentNode.data));
+        process.stdout.write(String(currentNode.val));
         process.stdout.write(` -> `);
         currentNode = currentNode.next;
       }
@@ -163,7 +163,7 @@ export default class LinkedList {
       let str = ''; // output
       let temp = this.head;
       while (temp !== null) {
-        str += String(temp.data);
+        str += String(temp.val);
         str += ' -> ';
         temp = temp.next;
       }
@@ -176,7 +176,7 @@ export default class LinkedList {
   search(element) {
     let currentNode = this.head;
     while (currentNode !== null) {
-      if (currentNode.data === element) return true;
+      if (currentNode.val === element) return true;
       currentNode = currentNode.next;
     }
     return false;
