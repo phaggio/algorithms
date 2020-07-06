@@ -5,48 +5,148 @@ class Node {
   }
 }
 
-
 class LinkedList {
   constructor() {
     this.head = null; // this is a Node
+    this.size = 0; // this stores the number of nodes in this list
   }
 
-  // insert a new node to the beginning of linked list
-  insertAtHead(newData) {
-    let tempNode = new Node(newData);
-    tempNode.next = this.head;
-    return this; // return the updated list
+  // insert a new node element to the beginning of linked list
+  insertAtHead(element) {
+    let node = new Node(element);
+    node.next = this.head;
+    this.head = node;
+    this.size++;
+    return this; // return the updated Linked List for chaining
+  }
+
+  // insert new element to the end of linked list
+  insert(element) {
+    // create a new Node and take element;
+    let node = new Node(element);
+
+    // if list is empty, the new node is at the head
+    if (this.head === null) {
+      this.head = node;
+      this.size++;
+      return this;
+    }
+
+    // iterate through the list to the last node
+    let currentNode = this.head;
+    while (currentNode.next !== null) {
+      currentNode = currentNode.next
+    }
+    currentNode.next = node; // add node
+    this.size++;
+    return this;
+  }
+
+  // insert new element at the position index of the list
+  insertAt(element, index) {
+    if (index > 0 && index > this.size) {
+      return false;
+    } else {
+      let node = new Node(element);
+      let currentNode = this.head;
+      let previousNode;
+      let i = 0;
+      if (index === 0) {
+        node.next = this.head;
+        this.head = node;
+      } else {
+        // find the node just before the index
+        while (i < index) {
+          i++;
+          previousNode = currentNode;
+          currentNode = currentNode.next;
+        }
+        // add the new element
+        node.next = currentNode;
+        previousNode.next = node;
+      }
+      this.size++;
+    }
+  }
+
+  // remove the node from specific index and return its data
+  removeFrom(index) {
+    // if list is empty return false
+    if (index > 0 && index > this.size) {
+      return null;
+    } else if (index === 0) {
+      this.head = this.head.next
+    } else {
+      let currentNode = this.head;
+      let previousNode;
+      let i = 0;
+      while (i < index) {
+        i++;
+        previousNode = currentNode;
+        currentNode = currentNode.next;
+      }
+      previousNode.next = currentNode.next; // remove current node
+      this.size--;
+      return currentNode.data; // return removed node data.
+    }
+  }
+
+  // remove the nodes that contain data=element from the list
+  removeElement(element) {
+    let currentNode = this.head;
+    let previousNode = null;
+
+    while (currentNode !== null) {
+      if (currentNode.data === element) {
+        if (previousNode === null) {
+          this.head = currentNode.next;
+        } else {
+          previousNode.next = currentNode.next;
+        }
+        this.size--;
+      }
+      previousNode = currentNode;
+      currentNode = currentNode.next
+    }
+    return this;
+  }
+
+  // return the index of a given element, if element is in the list
+  indexOf(element) {
+    let count = 0;
+    let currentNode = this.head;
+    while (currentNode !== null) {
+      if (currentNode.data === element) {
+        return count;
+      }
+      count++;
+      currentNode = currentNode.next;
+    }
+    return -1;
   }
 
   isEmpty() {
-    return (this.head === null);
+    return (this.size === 0);
   }
 
+  // print the content of the list
   printList() {
     if (this.isEmpty()) {
       console.log(`Empty List`);
-      return false;
     } else {
-      let temp = this.head;
-      while (temp !== null) {
-        process.stdout.write(String(temp.data));
+      let currentNode = this.head;
+      while (currentNode !== null) {
+        process.stdout.write(String(currentNode.data));
         process.stdout.write(` -> `);
-        temp = temp.next;
+        currentNode = currentNode.next;
       }
       console.log(`null`);
-      return true;
     }
   }
 
   getHead() {
     console.log(this.head)
     return this.head;
-  }
-
-  // update the data in the head of the linked list
-  setHead(newHead) {
-    this.head = newHead;
-    return this;
   }
 
   // get the linked list in string
@@ -67,84 +167,17 @@ class LinkedList {
     }
   }
 
-  // insert new data to the end of linked list
-  insertAtTail(newData) {
-    // create a new Node with data as newData;
-    let node = new Node(newData);
 
-    // if list is empty, the new node is at the head
-    if (this.isEmpty()) {
-      this.head = node;
-      return this;
-    }
-
-    // iterate through the list to the last element
-    let currentNode = this.head;
-    while (currentNode.next !== null) {
-      currentNode = currentNode.next;
-    }
-    // make new node the next element of the last node in list
-    currentNode.next = node;
-    return this;
-  }
-
-  search(value) {
+  // search element in List, return true if list contains the element
+  search(element) {
     let currentNode = this.head;
     while (currentNode !== null) {
-      if (currentNode.data === value) return true;
+      if (currentNode.data === element) return true;
       currentNode = currentNode.next;
     }
     return false;
   }
 
-  deleteAtHead() {
-    if (this.isEmpty()) return this;
-    let firstElement = this.head;
-    this.head = firstElement.next;
-    return this;
-  }
-
-  deleteValue(value) {
-    // if list is empty return false
-    if (this.isEmpty()) return false;
-
-
-    let currentNode = this.head;
-
-    // if first node is the node to delete, delete it and return true
-    if (currentNode.data === value) {
-      this.head = currentNode.next;
-      return true;
-    }
-
-    while (currentNode.next !== null) {
-      // if the next node's data equals to the value
-      if (currentNode.next.data === value) {
-        // change the current node.next to the next next one (skip the node matching value)
-        currentNode.next = currentNode.next.next;
-        return this;
-      }
-      currentNode = currentNode.next;
-    }
-    // node was not found, return false;
-    return false;
-  }
-
-  deleteAtTail() {
-    if (this.isEmpty()) return this;
-    let firstNode = this.head;
-    if (firstNode.next === null) {
-      this.deleteAtHead();
-      return this;
-    }
-
-    while (firstNode.next.next !== null) {
-      firstNode = firstNode.next;
-    }
-
-    firstNode.next = null;
-    return this;
-  }
 
 }
 
