@@ -5,10 +5,15 @@ class Node {
   }
 }
 
-class LinkedList {
-  constructor() {
+export default class LinkedList {
+  constructor(arr) {
     this.head = null; // this is a Node
     this.size = 0; // this stores the number of nodes in this list
+    if (arr) {
+      for (const item of arr) {
+        this.insert(item);
+      }
+    }
   }
 
   // insert a new node element to the beginning of linked list
@@ -167,7 +172,6 @@ class LinkedList {
     }
   }
 
-
   // search element in List, return true if list contains the element
   search(element) {
     let currentNode = this.head;
@@ -177,8 +181,10 @@ class LinkedList {
     }
     return false;
   }
-
-
 }
 
-export default LinkedList
+// export default LinkedList
+
+
+// const list = new LinkedList([1,2,3,4]);
+// list.printList();
