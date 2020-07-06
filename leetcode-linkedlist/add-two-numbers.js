@@ -9,8 +9,8 @@ const addTwoNumbers = (l1, l2) => {
 
   while (currentL1 !== null | currentL2 !== null | carryOver === true) {
     let carry = carryOver === true ? 1 : 0;
-    let l1Data = currentL1 !== null ? currentL1.data : 0;
-    let l2Data = currentL2 !== null ? currentL2.data : 0;
+    let l1Data = currentL1 !== null ? currentL1.val : 0;
+    let l2Data = currentL2 !== null ? currentL2.val : 0;
     let sum = l1Data + l2Data + carry;
     if (sum > 9) {
       newList.insert(sum % 10);

@@ -1,7 +1,7 @@
 class Node {
-  constructor(val, next) {
-    this.val = (val === undefined ? null : val);
-    this.next = (next === undefined ? null : next);
+  constructor(data) {
+    this.val = (data === undefined ? null : data)
+    this.next = null;
   }
 }
 
@@ -74,7 +74,7 @@ export default class LinkedList {
     }
   }
 
-  // remove the node from specific index and return its val
+  // remove the node from specific index and return its data
   removeFrom(index) {
     // if list is empty return false
     if (index > 0 && index > this.size) {
@@ -92,11 +92,11 @@ export default class LinkedList {
       }
       previousNode.next = currentNode.next; // remove current node
       this.size--;
-      return currentNode.val; // return removed node val.
+      return currentNode.val; // return removed node data.
     }
   }
 
-  // remove the nodes that contain val=element from the list
+  // remove the nodes that contain data=element from the list
   removeElement(element) {
     let currentNode = this.head;
     let previousNode = null;
