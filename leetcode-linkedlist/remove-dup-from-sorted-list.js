@@ -5,8 +5,6 @@
 // Output: 1->2
 
 
-import LinkedList from '../data-structure/LinkedList';
-
 const deleteDuplicates = head => {
   let node = head.head;
   if (!node) return head;

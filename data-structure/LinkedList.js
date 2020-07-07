@@ -81,6 +81,7 @@ export default class LinkedList {
       return null;
     } else if (index === 0) {
       this.head = this.head.next
+      this.size--;
     } else {
       let currentNode = this.head;
       let previousNode;
