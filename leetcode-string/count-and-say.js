@@ -32,3 +32,5 @@ const countAndSay = n => {
 }
 
 export default countAndSay
+
+// time O m * n 
