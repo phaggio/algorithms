@@ -41,4 +41,36 @@ describe('maxArea()', () => {
     expect(actual).toEqual(expected);
   });
 
+  it(`should return 4 for [1, 2, 3, 2, 1]`, () => {
+    const height = [1, 2, 3, 2, 1];
+    const expected = 4;
+    const actual = maxArea(height);
+
+    expect(actual).toEqual(expected);
+  });
+
+  it(`should return 36 for [2,3,4,5,6,7,8,9,8,7,6]`, () => {
+    const height = [2, 3, 4, 5, 6, 7, 8, 9, 8, 7, 6];
+    const expected = 36;
+    const actual = maxArea(height);
+
+    expect(actual).toEqual(expected);
+  });
+
+  it(`should return 25 for [2,3,4,5,6,7,8,9,8]`, () => {
+    const height = [2, 3, 4, 5, 6, 7, 8, 9, 8];
+    const expected = 25;
+    const actual = maxArea(height);
+
+    expect(actual).toEqual(expected);
+  });
+
+  it(`should return 49 for [-1,8,6,2,5,4,8,3,7]`, () => {
+    const height = [-1, 8, 6, 2, 5, 4, 8, 3, 7];
+    const expected = 49;
+    const actual = maxArea(height);
+
+    expect(actual).toEqual(expected);
+  });
+
 });

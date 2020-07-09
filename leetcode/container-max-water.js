@@ -9,8 +9,35 @@
 // Note: You may not slant the container and n is at least 2.
 
 
-const maxArea = height => {
+const min = (num1, num2) => {
+  if (num1 <= num2) return num1;
+  return num2;
+}
 
+
+const maxArea = height => {
+  if (!height || height.length === 1) return 0;
+
+  let left = 0
+  let right = height.length - 1;
+
+  let maxArea = 0;
+
+  while (left < right) {
+    let area = min(height[left], height[right]) * (right - left);
+    if (area > maxArea) maxArea = area;
+
+    if (height[left] < height[right]) {
+      left++;
+    } else {
+      right--;
+    }
+  }
+
+  return maxArea;
 }
 
 export default maxArea
+
+
+

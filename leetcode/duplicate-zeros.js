@@ -35,7 +35,7 @@
 // }
 
 const duplicateZeros = arr => {
-  if (arr.length === 1 || arr === null) return;
+  if (arr.length === 1 || arr === null) return arr; // return arr only for jest test locally
 
   let ret = [];
   let count = -1;
@@ -57,7 +57,7 @@ const duplicateZeros = arr => {
     array[index] = ret[index];
   });
 
-  // return arr;
+  return arr; // return only for jest test locally.
 }
 
 export default duplicateZeros
