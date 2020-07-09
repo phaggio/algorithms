@@ -21,6 +21,3 @@ const insertLevelOrder = (arr, root, i) => {
 
 export { BinaryTreeNode, insertLevelOrder }
 
-
-// const arr = [1, 2, 3];
-// console.log(insertLevelOrder(arr, arr[0], 0))

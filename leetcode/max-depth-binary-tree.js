@@ -10,11 +10,11 @@
 //Example:
 
 // Given binary tree [3,9,20,null,null,15,7]
-//    3
-//   / \
+//     3
+//    / \
 //   9  20
-//  /    \
-// 15     7
+//  /     \
+// 15      7
 
 // return its depth = 3;
 
@@ -33,12 +33,11 @@
  */
 
 const maxDepth = (root, level = 0) => {
-  if (!root) return 0;
+  if (!root) return level;
 
-  let left = maxDepth(root.left, level = level + 1);
-  let right = maxDepth(root.right, level = level + 1);
-
-  return Math.max(left, right) + 1;
+  let left = maxDepth(root.left, level + 1);
+  let right = maxDepth(root.right, level + 1);
+  return Math.max(left, right);
 }
 
 export default maxDepth

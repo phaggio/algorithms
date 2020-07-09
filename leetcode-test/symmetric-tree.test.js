@@ -1,4 +1,4 @@
-import isSymmetric from '../leetcode-bfs/symmetric-tree';
+import isSymmetric from '../leetcode/symmetric-tree';
 import { insertLevelOrder } from '../data-structure/BinaryTreeNode';
 
 describe('isSymmetric()', () => {

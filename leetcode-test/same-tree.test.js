@@ -1,4 +1,4 @@
-import isSameTree from '../leetcode-dfs/same-tree';
+import isSameTree from '../leetcode/same-tree';
 import { BinaryTreeNode, insertLevelOrder } from '../data-structure/BinaryTreeNode';
 
 describe('isSameTree()', () => {
