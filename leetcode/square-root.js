@@ -13,7 +13,7 @@ const mySqrt = num => {
 
   let high = (num - (num % 2)) / 2; // this will always return an whole number just at or below half
   let low = 2;
-  let mid = (high + low - ((high + low) % 2)) / 2;
+  let mid = (high + low - ((high + low) % 2)) / 2; // always get floor of (high + low) /2
 
   while (low !== mid) {
 
