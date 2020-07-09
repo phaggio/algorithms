@@ -20,3 +20,20 @@ const permute = nums => {
 }
 
 export default permute;
+
+
+
+
+
+  /**
+   * The goal is break down the problem by finding permutations in subarrays.
+   * So we will maintain a subarray of fixed elements and a subarray for 
+   * exploring permutations.
+   *
+   *                  [1], [2, 3]    [1, 2], [3]    [1, 2, 3]
+   * [], [1, 2, 3] -> [2], [1, 3] -> [1, 3], [2] -> [1, 3, 2]
+   *                  [3], [1, 2]    [2, 1], [1]    [2, 1, 3]
+   *                                 [2, 3], [1]    [2, 3, 1]
+   *                                 [3, 1], [2]    [3, 1, 2]
+   *                                 [3, 2], [1]    [3, 2, 1]                                 
+   */
