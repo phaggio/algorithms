@@ -3,25 +3,19 @@
 // Given a collection of distinct integers, return all possible permutations.
 
 const permute = nums => {
-  if (!nums.length) return [];
-  if (nums.length === 1) return nums;
 
   const result = [];
 
-  // const findPermutation = (visited = new Set(), current = []) => {
-  //   if (current.length === nums.length) {
-  //     result.push(current);
-  //     return;
-  //   }
-  
-  //   for (let i = 0; i < nums.length; ++i) {
-  //     if (!visited.has(i)) {
-  //       findPermutation(new Set([...visited, i]), [...current, nums[i]]);
-  //     }
-  //   }
-  // }
+  const dfs = (perm, rest) => {
+    if (rest.length === 0) result.push(perm);
 
-  // findPermutation();
+    for (let i = 0; i < rest.length; ++i) {
+      dfs([...perm, rest[i]], [...rest.slice(0, i), ...rest.slice(i + 1)])
+    }
+  }
+
+  dfs([], nums);
+
   return result;
 }
 
