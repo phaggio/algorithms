@@ -18,28 +18,44 @@
 //    3   3
 
 // iterative solution
+// const isSymmetric = root => {
+//   if (!root || (root.left === null && root.right === null)) return true;
+
+//   const queue = [root.left, root.right];
+
+//   while (queue.length !== 0) {
+//     let left = queue.shift();
+//     let right = queue.pop();
+//     if (left === null && right === null) continue;
+//     if (left === null || right === null) return false;
+
+
+//     if (left.val !== right.val) return false;
+
+//     queue.unshift(left.right);
+//     queue.push(right.left);
+//     queue.unshift(left.left);
+//     queue.push(right.right);
+//   }
+
+//   return true;
+// }
+
+// recursive
 const isSymmetric = root => {
   if (!root || (root.left === null && root.right === null)) return true;
 
-  const queue = [root.left, root.right];
+  const isMirror = (left, right) => {
+    if (left === null && right === null) return true;
+    if (left === null || right === null) return false;
 
-  while (queue.length !== 0) {
-    let left = queue.shift();
-    let right = queue.pop();
-    if (left === null && right === null) continue;
-    if (left === null && right !== null) return false;
-    if (left !== null && right === null) return false;
-
-    if (left.val !== right.val) return false;
-
-    queue.unshift(left.right);
-    queue.push(right.left);
-    queue.unshift(left.left);
-    queue.push(right.right);
+    return left.val === right.val && isMirror(left.right, right.left) && isMirror(left.left, right.right);
   }
 
-  return true;
+  return isMirror(root.left, root.right);
 }
+
+
 
 export default isSymmetric
 
