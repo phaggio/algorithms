@@ -1,4 +1,4 @@
-import searchMatrix from '../leetcode-arr/search-2d-matrix';
+import searchMatrix from '../leetcode/search-2d-matrix';
 
 describe('searchMatrix()', () => {
   it(

@@ -1,4 +1,4 @@
-import strStr from '../leetcode-arr/implement-str';
+import strStr from '../leetcode/implement-str';
 
 describe('strStr()', () => {
   it(`should return index of 2 for ('hello', 'll')`, () => {

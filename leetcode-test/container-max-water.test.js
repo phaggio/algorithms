@@ -1,4 +1,4 @@
-import maxArea from '../leetcode-arr/container-max-water';
+import maxArea from '../leetcode/container-max-water';
 
 describe('maxArea()', () => {
   it(`should return 4 for [1,8,6,2,5,4,8,3,7]`, () => {

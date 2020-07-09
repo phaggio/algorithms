@@ -1,4 +1,4 @@
-import removeElement from '../leetcode-arr/remove-element';
+import removeElement from '../leetcode/remove-element';
 
 describe('removeElement()', () => {
   it(`should return count of 3 for ([1, 2, 3, 3, 4], 3)`, () => {

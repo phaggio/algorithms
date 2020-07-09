@@ -1,4 +1,4 @@
-import findMedianSortedArrays from '../leetcode-arr/median-two-sorted-arr';
+import findMedianSortedArrays from '../leetcode/median-two-sorted-arr';
 
 describe('findMedianSortedArrays()', () => {
   it(

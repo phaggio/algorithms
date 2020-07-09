@@ -1,4 +1,4 @@
-import removeDup from '../leetcode-arr/remove-duplicate-sorted-array';
+import removeDup from '../leetcode/remove-duplicate-sorted-array';
 
 describe('removeDup()', () => {
   it(`should count of unique numbers in sorted arr [1, 2, 3, 3, 4]`, () => {

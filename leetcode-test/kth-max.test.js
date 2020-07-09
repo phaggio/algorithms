@@ -1,4 +1,4 @@
-import findKthLargest from '../leetcode-arr/kth-max';
+import findKthLargest from '../leetcode/kth-max';
 
 describe('findKthLargest()', () => {
   it(

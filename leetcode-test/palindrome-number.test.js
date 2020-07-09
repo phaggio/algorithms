@@ -1,4 +1,4 @@
-import isPalindrome from '../leetcode-arr/palindrome-number';
+import isPalindrome from '../leetcode/palindrome-number';
 
 describe('isPalindrome()', () => {
   it(`should return true for 121`, () => {

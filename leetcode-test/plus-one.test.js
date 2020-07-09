@@ -1,4 +1,4 @@
-import plusOne from '../leetcode-arr/plus-one';
+import plusOne from '../leetcode/plus-one';
 
 describe('plusOne()', () => {
   it(`should return [1, 2, 4] for [1, 2, 3]`, () => {

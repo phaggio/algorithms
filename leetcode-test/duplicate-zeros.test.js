@@ -1,4 +1,4 @@
-import duplicateZeros from '../leetcode-arr/duplicate-zeros.js';
+import duplicateZeros from '../leetcode/duplicate-zeros.js';
 
 describe('duplicateZeros()', () => {
   it(

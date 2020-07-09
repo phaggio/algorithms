@@ -1,4 +1,4 @@
-import thirdMax from '../leetcode-arr/third-max';
+import thirdMax from '../leetcode/third-max';
 
 describe('thirdMax()', () => {
   it(

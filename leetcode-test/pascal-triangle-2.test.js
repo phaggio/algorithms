@@ -1,4 +1,4 @@
-import generate from '../leetcode-arr/pascal-triangle-2';
+import generate from '../leetcode/pascal-triangle-2';
 
 describe('generate()', () => {
   it(`should return [1] for 0`, () => {

@@ -1,4 +1,4 @@
-import threeSumClosest from '../leetcode-arr/3sum-closest';
+import threeSumClosest from '../leetcode/3sum-closest';
 
 describe('threeSumClosest()', () => {
   it(

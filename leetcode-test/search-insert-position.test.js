@@ -1,4 +1,4 @@
-import searchInsertPosition from '../leetcode-arr/search-insert-position';
+import searchInsertPosition from '../leetcode/search-insert-position';
 
 describe('searchInsertPosition()', () => {
   it(`should return index = 2 for ([1, 3, 5, 6], 5)`, () => {

@@ -1,4 +1,4 @@
-import nextPermutation from '../leetcode-arr/next-permutation.js';
+import nextPermutation from '../leetcode/next-permutation.js';
 
 describe('nextPermutation()', () => {
   it(

@@ -1,4 +1,4 @@
-import threeSum from '../leetcode-arr/3sum.js';
+import threeSum from '../leetcode/3sum.js';
 
 describe('threeSum()', () => {
   it(

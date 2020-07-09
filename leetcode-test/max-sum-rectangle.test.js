@@ -1,4 +1,4 @@
-import maxSumSubMatrix from '../leetcode-arr/max-sum-rectangle.js';
+import maxSumSubMatrix from '../leetcode/max-sum-rectangle.js';
 
 describe('maxSumSubMatrix()', () => {
   it(

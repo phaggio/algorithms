@@ -1,4 +1,4 @@
-import countPrimes from '../leetcode-arr/count-prime';
+import countPrimes from '../leetcode/count-prime';
 
 describe('countPrimes()', () => {
   it(`should return 4 for n = 10`, () => {

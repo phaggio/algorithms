@@ -1,4 +1,4 @@
-import permute from '../leetcode-arr/permutations.js';
+import permute from '../leetcode/permutations.js';
 
 describe('permute()', () => {
   it(

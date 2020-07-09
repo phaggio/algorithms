@@ -1,4 +1,4 @@
-import maxSubarray from '../leetcode-arr/maximum-subarray';
+import maxSubarray from '../leetcode/maximum-subarray';
 
 describe('maxSubarray()', () => {
   it(`should return 6 for [-2, 1, -3, 4, -1, 2, 1, -5, 4]`, () => {
