@@ -1,4 +1,4 @@
-import isPalindrome from '../leetcode-string/valid-palindrome';
+import isPalindrome from '../leetcode/valid-palindrome';
 
 describe('isPalindrome()', () => {
 

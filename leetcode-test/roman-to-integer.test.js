@@ -1,4 +1,4 @@
-import romanToInt from '../leetcode-string/roman-to-integer';
+import romanToInt from '../leetcode/roman-to-integer';
 
 describe('romanToInt()', () => {
   it(`should return int of 1 for input 'I'`, () => {

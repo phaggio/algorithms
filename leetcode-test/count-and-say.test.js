@@ -1,4 +1,4 @@
-import countAndSay from '../leetcode-string/count-and-say';
+import countAndSay from '../leetcode/count-and-say';
 
 describe('countAndSay()', () => {
   it(`should return new string '1' for input of 1`, () => {

@@ -1,4 +1,4 @@
-import maxNumberOfBalloons from '../leetcode-string/max-num-balloons';
+import maxNumberOfBalloons from '../leetcode/max-num-balloons';
 
 describe('maxNumberOfBalloons()', () => {
 

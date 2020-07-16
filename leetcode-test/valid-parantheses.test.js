@@ -1,4 +1,4 @@
-import isValid from '../leetcode-string/valid-parantheses';
+import isValid from '../leetcode/valid-parantheses';
 
 describe('isValid()', () => {
   it(`should return true for "()"`, () => {

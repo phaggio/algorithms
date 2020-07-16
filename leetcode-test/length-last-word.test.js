@@ -1,4 +1,4 @@
-import lengthOfLastWord from '../leetcode-string/length-last-word';
+import lengthOfLastWord from '../leetcode/length-last-word';
 
 describe('lengthOfLastWord()', () => {
   it(`should return 5 for "Hello World"`, () => {

@@ -1,4 +1,4 @@
-import longestCommonPrefix from '../leetcode-string/longest-common-prefix';
+import longestCommonPrefix from '../leetcode/longest-common-prefix';
 
 describe('longestCommonPrefix()', () => {
   it(`should return 'fl`, () => {

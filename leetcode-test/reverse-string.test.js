@@ -1,4 +1,4 @@
-import reverseString from '../leetcode-string/reverse-string';
+import reverseString from '../leetcode/reverse-string';
 
 describe('reverseString()', () => {
   it(`should return ["o","l","l","e","h"]`, () => {

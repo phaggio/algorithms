@@ -1,4 +1,4 @@
-import canConstruct from '../leetcode-string/ransom-note';
+import canConstruct from '../leetcode/ransom-note';
 
 describe('canConstruct()', () => {
   it(`should return false for "a", "b"`, () => {
