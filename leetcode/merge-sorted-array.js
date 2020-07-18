@@ -18,9 +18,20 @@
 
 
 const merge = (nums1, m, nums2, n) => {
+  --m;
+  --n;
 
+  for (let i = nums1.length - 1; i >= 0; --i) {
+    if (n < 0) return nums1;
 
-
+    if (nums1[m] >= nums2[n]) {
+      nums1[i] = nums1[m];
+      --m;
+    } else {
+      nums1[i] = nums2[n];
+      --n;
+    }
+  }
   return nums1;
 }
 

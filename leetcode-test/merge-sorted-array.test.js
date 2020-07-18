@@ -56,6 +56,24 @@ describe('merge()', () => {
   });
 
   it(
+    `should return [0,2,5,6] for
+      nums1 = [0,0,0,0]
+      m = 1
+      num2 = [2,5,6]
+      n = 3
+  `, () => {
+    const nums1 = [0, 0, 0, 0];
+    const m = 1;
+    const nums2 = [2, 5, 6];
+    const n = 3;
+
+    const expected = [0, 2, 5, 6];
+    const actual = merge(nums1, m, nums2, n);
+
+    expect(actual).toEqual(expected);
+  });
+
+  it(
     `should return [2,4,5,5,5,6,6] for
       nums1 = [4,5,5,6,0,0,0]
       m = 4
@@ -86,6 +104,24 @@ describe('merge()', () => {
     const n = 1;
 
     const expected = [2, 3, 4, 5, 5, 6, 7];
+    const actual = merge(nums1, m, nums2, n);
+
+    expect(actual).toEqual(expected);
+  });
+
+  it(
+    `should return [2,2,4,4,5,6,6] for
+      nums1 = [2,2,4,4,6,6,0]
+      m = 6
+      num2 = [5]
+      n = 1
+  `, () => {
+    const nums1 = [2, 2, 4, 4, 6, 6, 0];
+    const m = 6;
+    const nums2 = [5];
+    const n = 1;
+
+    const expected = [2, 2, 4, 4, 5, 6, 6];
     const actual = merge(nums1, m, nums2, n);
 
     expect(actual).toEqual(expected);
