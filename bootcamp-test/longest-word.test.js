@@ -3,7 +3,7 @@ import longestWord from '../bootcamp/longest-word';
 describe(`longestWord()`, () => {
   it(`should return null if str is null`, () => {
     const str = '';
-    const expected = '';
+    const expected = null;
     const actual = longestWord(str);
 
     expect(actual).toEqual(expected);
