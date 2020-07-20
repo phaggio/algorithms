@@ -5,4 +5,18 @@ class ListNode {
   }
 }
 
-export default ListNode
+const createLinkedList = arr => {
+  let root = new ListNode(arr[0]);
+  let node = root;
+  for (let i = 1; i < arr.length; ++i) {
+    node.next = new ListNode(arr[i]);
+    node = node.next;
+  };
+
+  return root;
+}
+
+export {
+  ListNode,
+  createLinkedList
+}
