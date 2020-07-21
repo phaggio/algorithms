@@ -1,4 +1,3 @@
-
 class BinaryTreeNode {
   constructor(val, left, right) {
     this.val = (val === undefined ? 0 : val);
@@ -15,7 +14,6 @@ const insertLevelOrder = (arr, root, i) => {
     root.left = insertLevelOrder(arr, root.left, 2 * i + 1);
     root.right = insertLevelOrder(arr, root.right, 2 * i + 2);
   }
-
   return root;
 }
 
