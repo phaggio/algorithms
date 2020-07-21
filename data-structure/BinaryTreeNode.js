@@ -6,6 +6,20 @@ class BinaryTreeNode {
   }
 }
 
+// must put 'null' for all placeholder in array.
+// Example: [0, 1, 2, 3, null, 5, 6, 7, 8, null, null, null, null, null, 14]
+
+//          0
+//       /      \
+//      1        2
+//     / \      /  \
+//    3   n     5    6
+//   / \ / \   / \  / \
+//  7  8 n  n  n n  n 14 
+
+
+
+
 const insertLevelOrder = (arr, root, i) => {
   if (i < arr.length) {
     const newNode = new BinaryTreeNode(arr[i]);
