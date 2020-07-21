@@ -16,7 +16,7 @@ const majorityElement = nums => {
   let majority = Math.floor(nums.length / 3) + 1;
   let map = {};
   let output = [];
-  console.log(majority)
+  
   for (const num of nums) {
     if (!map[num]) {
       map[num] = 1;
