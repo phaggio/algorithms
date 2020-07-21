@@ -1,4 +1,4 @@
-import climbStairs from '../leetcode-dynamic/climbing-stairs';
+import climbStairs from '../leetcode/climbing-stairs';
 
 
 describe('climbStairs()', () => {

@@ -1,4 +1,4 @@
-import tribonacci from '../leetcode-dynamic/tribonacci';
+import tribonacci from '../leetcode/tribonacci';
 
 describe('tribonacci()', () => {
   it(

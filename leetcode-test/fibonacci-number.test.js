@@ -1,4 +1,4 @@
-import fib from '../leetcode-dynamic/fibonacci-number';
+import fib from '../leetcode/fibonacci-number';
 
 describe('fib()', () => {
   it(
