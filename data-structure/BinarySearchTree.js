@@ -1,8 +1,8 @@
 class Node {
   constructor(value) {
     this.val = value;
-    this.rightChild = null;
-    this.leftChild = null;
+    this.right = null;
+    this.left = null;
   }
 }
 
@@ -17,9 +17,9 @@ class BinarySearchTree {
       currentNode = new Node(newValue);
     } else if (newValue < currentNode.val) {
       // if new value is less than current node, go to the left child and call insert() with the left child node
-      currentNode.leftChild = this.insert(currentNode.leftChild, newValue)
+      currentNode.left = this.insert(currentNode.left, newValue)
     } else {
-      currentNode.rightChild = this.insert(currentNode.rightChild, newValue)
+      currentNode.right = this.insert(currentNode.right, newValue)
     }
     return currentNode;
   }
@@ -34,9 +34,6 @@ class BinarySearchTree {
     // this will traverse through the tree and 
     this.insert(this.root, newValue);
   }
-
-
-
 }
 
 

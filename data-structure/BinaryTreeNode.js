@@ -18,8 +18,6 @@ class BinaryTreeNode {
 //  7  8 n  n  n n  n 14 
 
 
-
-
 const insertLevelOrder = (arr, root, i) => {
   if (i < arr.length) {
     const newNode = new BinaryTreeNode(arr[i]);
@@ -31,5 +29,26 @@ const insertLevelOrder = (arr, root, i) => {
   return root;
 }
 
-export { BinaryTreeNode, insertLevelOrder }
+// this works on leetcode. it takes array and convert to Binary Search Tree, returns root
+const arrayToBinaryTree = arr => {
+  let queue = [];
+  let root = new BinaryTreeNode(arr.shift());
+  queue.push(root);
+  while (queue.length !== 0) {
+    let currentNode = queue.shift();
+    if (currentNode === null) {
+      continue;
+    } else {
+      let leftValue = arr[0] === undefined ? null : arr.shift();
+      currentNode.left = leftValue === null ? null : new BinaryTreeNode(leftValue);
+      queue.push(currentNode.left);
+      let rightValue = arr[0] === undefined ? null : arr.shift();
+      currentNode.right = rightValue === null ? null : new BinaryTreeNode(rightValue);
+      queue.push(currentNode.right);
+    }
+  }
+  return root;
+}
 
+
+export { BinaryTreeNode, insertLevelOrder, arrayToBinaryTree }
