@@ -1,14 +1,14 @@
-class Node {
-  constructor(value) {
-    this.val = value;
-    this.right = null;
-    this.left = null;
+class BinaryTreeNode {
+  constructor(val, left, right) {
+    this.val = (val === undefined ? 0 : val);
+    this.left = (left === undefined ? null : left);
+    this.right = (right === undefined ? null : right);
   }
 }
 
 class BinarySearchTree {
   constructor(rootValue) {
-    this.root = new Node(rootValue);
+    this.root = new BinaryTreeNode(rootValue);
   }
 
   // traverse through tree, find right node for newValue, return the node
