@@ -14,7 +14,32 @@
 // Length of the given string and k will in the range [1, 10000]
 
 const reverseStr = (s, k) => {
+  let iterator = k;
+  let reverse = true;
+  let reverseIndex = 0;
+  let reversedStr = '';
 
+  for (let i = 0; i < s.length; ++i) {
+    if (iterator === k) {
+      reverseIndex = s[(i + k - 1)] ? (i + k - 1) : s.length - 1;
+      reverse = true;
+    } else if (iterator === 0) {
+      reverse = false;
+    }
+
+    if (reverse) {
+      if (s[reverseIndex]) {
+        reversedStr += s[reverseIndex];
+      }
+      iterator--;
+      reverseIndex--;
+    } else {
+      reversedStr += s[i];
+      iterator++;
+    }
+  }
+
+  return reversedStr;
 }
 
 export default reverseStr

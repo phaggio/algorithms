@@ -46,4 +46,24 @@ describe('reverseStr()', () => {
 
     expect(actual).toEqual(expected);
   });
+
+  it(`should return 'dcbaefg' for 'abcdefg'`, () => {
+    const s = 'abcdefg';
+    const k = 4;
+    const expected = 'dcbaefg';
+    const actual = reverseStr(s, k);
+
+    expect(actual).toEqual(expected);
+  });
+
+  it(`should return 'cba' for 'abc'`, () => {
+    const s = 'abc';
+    const k = 4;
+    const expected = 'cba';
+    const actual = reverseStr(s, k);
+
+    expect(actual).toEqual(expected);
+  });
+
+
 });
