@@ -43,4 +43,23 @@ const validPalindrome = s => {
   return true;
 }
 
+
+// const validPalindrome = (s, correction = 1) => {
+//   let left = 0;
+//   let right = s.length - 1;
+
+//   while (left < right) {
+//     if (s[left] === s[right]) {
+//       left++;
+//       right--;
+//       continue;
+//     } else if (correction === 0) {
+//       return false;
+//     }
+
+//     return validPalindrome(s.slice(left, right), 0) || validPalindrome(s.slice(left + 1, right + 1), 0)
+//   }
+//   return true;
+// }
+
 export default validPalindrome
