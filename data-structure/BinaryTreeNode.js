@@ -31,6 +31,7 @@ const insertLevelOrder = (arr, root, i) => {
 
 // this works on leetcode. it takes array and convert to Binary Search Tree, returns root
 const arrayToBinaryTree = arr => {
+  if (arr.length === 0) return;
   let queue = [];
   let root = new BinaryTreeNode(arr.shift());
   queue.push(root);
