@@ -4,9 +4,11 @@ const selection = arr => {
     for (let j = i + 1; j < arr.length; ++j) {
       if (arr[j] <= arr[lowestNumIndex]) lowestNumIndex = j
     }
-    const temp = arr[i]
-    arr[i] = arr[lowestNumIndex]
-    arr[lowestNumIndex] = temp
+    if (lowestNumIndex !== i) {
+      const temp = arr[i]
+      arr[i] = arr[lowestNumIndex]
+      arr[lowestNumIndex] = temp
+    }
   }
   return arr
 }
