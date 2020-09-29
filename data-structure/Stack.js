@@ -5,10 +5,6 @@ class Stack {
     this.top = null;
   }
 
-  getTop() {
-    if (this.items.length === 0) return this.top;
-  }
-
   isEmpty() {
     return this.items.length === 0;
   }
