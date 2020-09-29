@@ -17,4 +17,44 @@ describe('quicksort()', () => {
     expect(actual).toEqual(expected);
   });
 
+  it('should return a sorted array', () => {
+    const arr = [2, 1];
+    const expected = [1, 2]
+    const actual = quicksort(arr, 0, arr.length - 1);
+
+    expect(actual).toEqual(expected);
+  });
+
+  it('should return a sorted array', () => {
+    const arr = [1];
+    const expected = [1]
+    const actual = quicksort(arr, 0, arr.length - 1);
+
+    expect(actual).toEqual(expected);
+  });
+
+  it('should return a sorted array', () => {
+    const arr = [3, 2, 1];
+    const expected = [1, 2, 3]
+    const actual = quicksort(arr, 0, arr.length - 1);
+
+    expect(actual).toEqual(expected);
+  });
+
+  it('should return a sorted array', () => {
+    const arr = [5, 4, 3, 2, 1];
+    const expected = [1, 2, 3, 4, 5]
+    const actual = quicksort(arr, 0, arr.length - 1);
+
+    expect(actual).toEqual(expected);
+  });
+
+  it('should return a sorted array', () => {
+    const arr = [1, 2, 3, 4, 5];
+    const expected = [1, 2, 3, 4, 5]
+    const actual = quicksort(arr, 0, arr.length - 1);
+
+    expect(actual).toEqual(expected);
+  });
+
 })

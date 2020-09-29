@@ -4,14 +4,13 @@ const swap = (arr, left, right) => {
 	arr[right] = temp;
 }
 
-const partition = (arr, left, right) => {
-	const pivot = arr[Math.floor((left + right) / 2)]
-
+const partition = (arr, left, right, pivot) => {
 	while (left <= right) {
 		while (arr[left] < pivot) left++;
 		while (arr[right] > pivot) right--;
+
 		if (left <= right) {
-			swap(arr, left, right)
+			swap(arr, left, right);
 			left++;
 			right--;
 		}
@@ -21,13 +20,15 @@ const partition = (arr, left, right) => {
 }
 
 const quicksort = (arr, left, right) => {
-	if (arr.length > 1) {
-		let partitionIndex = partition(arr, left, right)
-		if (left < partitionIndex - 1) quicksort(arr, left, partitionIndex - 1)
-		if (partitionIndex < right) quicksort(arr, partitionIndex, right)
-	}
-	
-	return arr
+	if (left >= right) return arr;
+
+	const pivot = arr[left + Math.floor((right - left) / 2)]
+	const index = partition(arr, left, right, pivot)
+
+	quicksort(arr, left, index - 1)
+	quicksort(arr, index, right)
+
+	return arr;
 }
 
 export default quicksort
