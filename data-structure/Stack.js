@@ -1,4 +1,3 @@
-
 class Stack {
   constructor() {
     this.items = [];
@@ -18,6 +17,14 @@ class Stack {
     this.top = element;
   }
 
+  peek() {
+    if (this.isEmpty()) {
+      return undefined;
+    } else {
+      return this.top;
+    }
+  }
+
   pop() {
     if (this.items.length !== 0) {
 
@@ -34,9 +41,10 @@ class Stack {
       }
 
     } else {
-      return null;
+      return undefined;
     }
   }
+  
 }
 
 export default Stack
