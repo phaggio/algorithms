@@ -146,10 +146,40 @@ class DoublyLinkedList {
     return false;
   }
 
-  
+  // return the first index of the data found in the Linked List
+  indexOf(data) {
+    let trav = this.head;
+    let index = 0
+    while (trav !== null) {
+      if (trav.data === data) return index;
+      trav = trav.next;
+      index++;
+    }
+    return -1;
+  }
 
+  // return a string representation of the list
+  toString() {
+    if (this.isEmpty()) return "[]";
+    if (this.size === 1) return "[ " + this.head.data + " ]";
+    let string = "[ ";
+    let trav = this.head;
+    while (trav !== null) {
+      if (trav !== this.tail) {
+        string = string + trav.data + ", "
+      } else {
+        // no comma after last element
+        string = string + trav.data
+      }
+      trav = trav.next;
+    }
+    string = string + " ]";
+    return string;
+  }
 
 }
+
+
 
 
 export default DoublyLinkedList
