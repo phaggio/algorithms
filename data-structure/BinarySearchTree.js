@@ -1,4 +1,4 @@
-class BinaryTreeNode {
+class Node {
   constructor(val, left, right) {
     this.val = (val === undefined ? 0 : val);
     this.left = (left === undefined ? null : left);
@@ -6,9 +6,33 @@ class BinaryTreeNode {
   }
 }
 
+// BST allows duplicate values, but usually unique. it is not limited to only numbers, as long as they're comparable.
 class BinarySearchTree {
   constructor(rootValue) {
-    this.root = new BinaryTreeNode(rootValue);
+    this.root = rootValue === undefined ? null : new Node(rootValue);
+    this.size = rootValue === undefined ? 0 : 1;
+  }
+
+  isEmpty() {
+    return this.size === 0;
+  }
+
+  getSize() {
+    return this.size;
+  }
+
+  add(data) {
+    if (this.#contains(data)) {
+      return false;
+    } else {
+      
+      this.size++;
+      return true;
+    }
+  }
+
+  #contains(data) {
+    return true
   }
 
   // traverse through tree, find right node for newValue, return the node
