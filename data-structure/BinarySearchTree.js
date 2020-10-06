@@ -24,7 +24,7 @@ class BinarySearchTree {
 
   // public method to add new data, if data already exist in BST, return false.
   add(data) {
-    if (this.#contains(data)) {
+    if (this.#contains(this.root, data)) {
       return false;
     } else {
       // private recursive method to add new data to BST
@@ -50,7 +50,7 @@ class BinarySearchTree {
 
   // public method to remove data, if data 
   remove(data) {
-    if (this.#contains(data)) {
+    if (this.#contains(this.root, data)) {
       this.root = this.#remove(this.root, data);
       this.size--;
       return true;
@@ -119,7 +119,8 @@ class BinarySearchTree {
     }
   }
 
+
 }
 
 
-export default BinarySearchTree
+module.exports = BinarySearchTree
