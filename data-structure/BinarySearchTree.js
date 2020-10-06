@@ -21,6 +21,7 @@ class BinarySearchTree {
     return this.size;
   }
 
+
   // public method to add new data, if data already exist in BST, return false.
   add(data) {
     if (this.#contains(data)) {
@@ -47,36 +48,77 @@ class BinarySearchTree {
     return node;
   }
 
-  remove(data)
-
-  #contains(data) {
-
-    return true;
+  // public method to remove data, if data 
+  remove(data) {
+    if (this.#contains(data)) {
+      this.root = this.#remove(this.root, data);
+      this.size--;
+      return true;
+    }
+    return false;
   }
 
-  // traverse through tree, find right node for newValue, return the node
-  insert(currentNode, newValue) {
-    if (currentNode === null) {
-      currentNode = new Node(newValue);
-    } else if (newValue < currentNode.val) {
-      // if new value is less than current node, go to the left child and call insert() with the left child node
-      currentNode.left = this.insert(currentNode.left, newValue)
+  // private recursive method to remove data from tree.
+  #remove(node, data) {
+    if (node === null) return null;
+
+    if (data < node.data) {
+      node.left = this.#remove(node.left, data);
+    } else if (data > node.data) {
+      node.right = this.#remove(node.right, data);
     } else {
-      currentNode.right = this.insert(currentNode.right, newValue)
+
+      // remove the node, there could be 4 cases.
+      // left sub tree is null
+      if (node.left === null && node.right !== null) {
+        let rightChild = node.right;
+        // clear memory
+        node.data = null;
+        node = null;
+        return rightChild;
+
+        // right sub tree is null
+      } else if (node.right === null && node.left !== null) {
+        let leftChild = node.left;
+        // clear memory
+        node.data = null;
+        node = null;
+        return leftChild;
+
+        // both sub trees exist
+      } else {
+        // find the most left node in the right sub tree
+        let temp = this.#digLeft(node.right);
+        // swap data
+        node.data = temp.data;
+        // remove the most left node from the right sub tree.
+        node.right = this.#remove(node.right, temp.data);
+      }
+
     }
-    return currentNode;
+    return node;
   }
 
-  // insert the new value to BinarySearchTree
-  insertBST(newValue) {
-    // root is null (empty tree), set the new value as root node
-    if (this.root === null) {
-      this.root = new Node(newValue);
-      return;
+  // private method to find most left node
+  #digLeft(node) {
+    let currNode = node;
+    while (currNode.left !== null) {
+      currNode = currNode.left;
     }
-    // this will traverse through the tree and 
-    this.insert(this.root, newValue);
+    return currNode;
   }
+
+  #contains(node, data) {
+    if (node === null) return false;
+    if (data < node.data) {
+      return this.#contains(node.left, data);
+    } else if (data > node.data) {
+      return this.#contains(node.right, data);
+    } else {
+      return true;
+    }
+  }
+
 }
 
 
