@@ -26,4 +26,4 @@ const addTwoNumbers = (l1, l2) => {
   return newList;
 }
 
-export default addTwoNumbers
+export default addTwoNumbers;
